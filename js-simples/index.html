@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Simples</title>
+  </head>
+  <body>
+    <div>
+      <p id="counter">Счётчик: 0</p>
+      <button id="incrementBtn">Увеличить</button>
+    </div>
+
+    <script>
+      let count = 0;
+      const counterElement = document.getElementById("counter");
+      const incrementBtn = document.getElementById("incrementBtn");
+
+      incrementBtn.addEventListener("click", () => {
+        count++;
+        counterElement.textContent = `Счётчик: ${count}`;
+      });
+    </script>
+  </body>
+</html>
