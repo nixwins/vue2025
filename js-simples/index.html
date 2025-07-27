@@ -16,10 +16,17 @@
       const counterElement = document.getElementById("counter");
       const incrementBtn = document.getElementById("incrementBtn");
 
-      incrementBtn.addEventListener("click", () => {
+      incrementBtn.addEventListener("click", (event) => {
         count++;
         counterElement.textContent = `Счётчик: ${count}`;
       });
+
+      const number = ref(0);
+      function ref(value) {
+        return {
+          value,
+        };
+      }
     </script>
   </body>
 </html>
