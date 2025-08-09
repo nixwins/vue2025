@@ -1,4 +1,5 @@
 <script setup lang="js">
+import ListItem from './ListItem.vue'
 import Todos from './Todos.vue';
 import { ref } from 'vue';
 
@@ -15,7 +16,7 @@ const users = ref([
   {
     id: 1,
     name: 'John',
-    age: 20
+    age:17
   },
   {
     id: 2,
@@ -28,13 +29,63 @@ const users = ref([
     age: 22
   }
 ])
+
+const products = ref([
+  {
+    id: 1,
+    name: 'Product 1',
+    price: 100
+  },
+
+])
+
+const isLoggedIn = ref(false)
+const status = ref('success')
+
+const deleteUser = (id) => {
+  console.log(id)
+  users.value = users.value.filter((user) => user.id !== id)
+}
+
+const addClass = (id) => {
+  console.log(id)
+}
 </script>
 <template>
   <div class="container">
+    <ListItem
+      :items="users"
+      title="Users"
+      @delete="deleteUser"
+      @hoverItem="addClass"
+      <hr
+    />
+    <ListItem :items="products" />
+    <header>
+      <button
+        v-if="!isLoggedIn"
+        class="btn"
+        :class="{ loading: status === 'loading' }"
+      >
+        Login
+      </button>
+      <button v-else>Avatar</button>
+      <p
+        class="status"
+        :class="['status-pending', { 'status-success': status === 'success' }]"
+      >
+        {{ status }}
+      </p>
+    </header>
     <Todos />
     <ul>
       <li v-for="user in users" :key="user.id">
         {{ user.name }} - {{ user.age }}
+      </li>
+    </ul>
+    <ul>
+      <li v-for="product in products" :key="product.id">
+        {{ product.name }} - {{ product.price }}
       </li>
     </ul>
 
@@ -44,11 +95,28 @@ const users = ref([
     <img v-bind:src="imgSrc" />
   </div>
 </template>
-<style scoped>
+<style>
+.status {
+  color: red;
+}
+.status-pending {
+  color: blue;
+}
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.loading {
+  background-color: #6c757d;
 }
 </style>
