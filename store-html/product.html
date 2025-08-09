@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 9 | DummyJSON Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header with Navbar -->
+    <header class="bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand" href="index.html">DummyJSON Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <form class="d-flex me-2">
+                        <input class="form-control me-2" type="search" placeholder="Search products...">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <a href="auth.html" class="btn btn-outline-light me-2">Login</a>
+                    <a href="cart.html" class="btn btn-primary position-relative">
+                        Cart
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            3
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <!-- Product Images -->
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <img src="https://i.dummyjson.com/data/products/1/1.jpg" class="img-fluid rounded" alt="iPhone 9">
+                </div>
+                <div class="row g-2">
+                    <div class="col-3">
+                        <img src="https://i.dummyjson.com/data/products/1/2.jpg" class="img-fluid rounded border cursor-pointer" alt="iPhone 9 thumbnail">
+                    </div>
+                    <div class="col-3">
+                        <img src="https://i.dummyjson.com/data/products/1/3.jpg" class="img-fluid rounded border cursor-pointer" alt="iPhone 9 thumbnail">
+                    </div>
+                    <div class="col-3">
+                        <img src="https://i.dummyjson.com/data/products/1/4.jpg" class="img-fluid rounded border cursor-pointer" alt="iPhone 9 thumbnail">
+                    </div>
+                    <div class="col-3">
+                        <img src="https://i.dummyjson.com/data/products/1/thumbnail.jpg" class="img-fluid rounded border cursor-pointer" alt="iPhone 9 thumbnail">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Details -->
+            <div class="col-md-6">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Smartphones</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">iPhone 9</li>
+                    </ol>
+                </nav>
+                
+                <h2 class="mb-3">iPhone 9</h2>
+                
+                <div class="d-flex align-items-center mb-3">
+                    <div class="text-warning me-2">
+                        ★★★★☆
+                    </div>
+                    <span class="text-muted">4.69 (94 reviews)</span>
+                </div>
+                
+                <div class="mb-4">
+                    <span class="h3 text-danger">$549.00</span>
+                    <span class="text-decoration-line-through text-muted ms-2">$599.00</span>
+                    <span class="badge bg-success ms-2">Save $50.00</span>
+                </div>
+                
+                <p class="mb-4">An apple mobile which is nothing like apple. A high-quality phone with excellent camera and performance.</p>
+                
+                <div class="mb-4">
+                    <h6>Specifications:</h6>
+                    <ul class="list-unstyled">
+                        <li><strong>Brand:</strong> Apple</li>
+                        <li><strong>Model:</strong> iPhone 9</li>
+                        <li><strong>Color:</strong> Black</li>
+                        <li><strong>Storage:</strong> 64GB</li>
+                        <li><strong>Display:</strong> 4.7-inch Retina HD</li>
+                        <li><strong>Chip:</strong> A13 Bionic</li>
+                        <li><strong>Battery:</strong> Up to 17 hours video playback</li>
+                    </ul>
+                </div>
+                
+                <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                        <label for="quantity" class="form-label">Quantity</label>
+                        <div class="input-group">
+                            <button class="btn btn-outline-secondary" type="button">-</button>
+                            <input type="text" class="form-control text-center" value="1" id="quantity">
+                            <button class="btn btn-outline-secondary" type="button">+</button>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <label for="color" class="form-label">Color</label>
+                        <select class="form-select" id="color">
+                            <option selected>Black</option>
+                            <option>White</option>
+                            <option>Red</option>
+                            <option>Blue</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="d-grid gap-2 d-md-block mb-4">
+                    <button class="btn btn-primary me-md-2 px-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg>
+                        Add to Cart
+                    </button>
+                    <button class="btn btn-outline-secondary px-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                        </svg>
+                        Add to Wishlist
+                    </button>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-header bg-light">
+                        <h6 class="mb-0">Shipping & Returns</h6>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled small">
+                            <li class="mb-2"><strong>Free shipping</strong> on orders over $50</li>
+                            <li class="mb-2"><strong>Returns:</strong> 30-day return policy</li>
+                            <li><strong>Delivery:</strong> Estimated 2-4 business days</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Tabs -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab">Description</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button" role="tab">Specifications</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab">Reviews</button>
+                    </li>
+                </ul>
+                <div class="tab-content p-3 border border-top-0 rounded-bottom" id="productTabsContent">
+                    <div class="tab-pane fade show active" id="description" role="tabpanel">
+                        <h5>Product Description</h5>
+                        <p>An apple mobile which is nothing like apple. The iPhone 9 combines a classic design with modern features, offering a 4.7-inch Retina HD display, the A13 Bionic chip for incredible performance, and an advanced single-camera system.</p>
+                        <p>With up to 17 hours of video playback, the iPhone 9 lasts all day on a single charge. The durable glass and aluminum design is water resistant, and the Home button with Touch ID provides secure authentication.</p>
+                    </div>
+                    <div class="tab-pane fade" id="specs" role="tabpanel">
+                        <h5>Technical Specifications</h5>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Display</th>
+                                    <td>4.7-inch Retina HD display</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Chip</th>
+                                    <td>A13 Bionic chip with third-generation Neural Engine</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Camera</th>
+                                    <td>12MP Wide camera with Night mode, Portrait mode, and 4K video up to 60 fps</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Front Camera</th>
+                                    <td>7MP camera with Portrait mode and 1080p HD video</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Battery</th>
+                                    <td>Up to 17 hours video playback</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Water Resistance</th>
+                                    <td>IP67 (up to 1 meter for 30 minutes)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="reviews" role="tabpanel">
+                        <h5>Customer Reviews</h5>
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div>
+                                    <span class="text-warning">★★★★☆</span>
+                                    <span class="ms-2 fw-bold">Great phone!</span>
+                                </div>
+                                <small class="text-muted">Posted on 2023-05-15 by John D.</small>
+                            </div>
+                            <p>The iPhone 9 is a perfect blend of classic design and modern features. The battery life is impressive and the camera quality is excellent for the price.</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <div>
+                                    <span class="text-warning">★★★★★</span>
+                                    <span class="ms-2 fw-bold">Excellent value</span>
+                                </div>
+                                <small class="text-muted">Posted on 2023-04-28 by Sarah M.</small>
+                            </div>
+                            <p>Coming from an older model, the performance improvement is noticeable. The size is perfect for one-handed use.</p>
+                        </div>
+                        
+                        <form class="mt-5">
+                            <h6>Write a Review</h6>
+                            <div class="mb-3">
+                                <label for="reviewRating" class="form-label">Rating</label>
+                                <select class="form-select" id="reviewRating">
+                                    <option selected>5 - Excellent</option>
+                                    <option>4 - Good</option>
+                                    <option>3 - Average</option>
+                                    <option>2 - Poor</option>
+                                    <option>1 - Terrible</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="reviewText" class="form-label">Review</label>
+                                <textarea class="form-control" id="reviewText" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Review</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Related Products -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h4 class="mb-4">You May Also Like</h4>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                    <!-- Related Product 1 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://i.dummyjson.com/data/products/2/thumbnail.jpg" class="card-img-top p-3" alt="iPhone X">
+                            <div class="card-body">
+                                <h5 class="card-title">iPhone X</h5>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="text-danger fw-bold">$899</span>
+                                    <span class="text-warning">★ 4.44 (34)</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <a href="product.html?id=2" class="btn btn-outline-primary w-100">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Related Product 2 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://i.dummyjson.com/data/products/4/thumbnail.jpg" class="card-img-top p-3" alt="OPPOF19">
+                            <div class="card-body">
+                                <h5 class="card-title">OPPOF19</h5>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="text-danger fw-bold">$280</span>
+                                    <span class="text-warning">★ 4.3 (125)</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <a href="product.html?id=4" class="btn btn-outline-primary w-100">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Related Product 3 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://i.dummyjson.com/data/products/5/thumbnail.jpg" class="card-img-top p-3" alt="Huawei P30">
+                            <div class="card-body">
+                                <h5 class="card-title">Huawei P30</h5>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="text-danger fw-bold">$499</span>
+                                    <span class="text-warning">★ 4.09 (32)</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <a href="product.html?id=5" class="btn btn-outline-primary w-100">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Related Product 4 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://i.dummyjson.com/data/products/7/thumbnail.jpg" class="card-img-top p-3" alt="Samsung Galaxy Book">
+                            <div class="card-body">
+                                <h5 class="card-title">Samsung Galaxy Book</h5>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="text-danger fw-bold">$1499</span>
+                                    <span class="text-warning">★ 4.25 (50)</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <a href="product.html?id=7" class="btn btn-outline-primary w-100">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>DummyJSON Store</h5>
+                    <p class="text-muted">The best fake store using dummyjson.com API</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Products</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">About Us</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <address class="text-muted">
+                        Email: info@dummyjsonstore.com<br>
+                        Phone: (123) 456-7890
+                    </address>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="text-center text-muted">
+                <small>&copy; 2023 DummyJSON Store. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

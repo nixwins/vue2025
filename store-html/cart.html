@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | DummyJSON Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header with Navbar -->
+    <header class="bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand" href="index.html">DummyJSON Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <form class="d-flex me-2">
+                        <input class="form-control me-2" type="search" placeholder="Search products...">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <a href="auth.html" class="btn btn-outline-light me-2">Login</a>
+                    <a href="cart.html" class="btn btn-primary position-relative">
+                        Cart
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            3
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mb-4">Your Shopping Cart</h2>
+                
+                <!-- Cart Items -->
+                <div class="card mb-4">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th scope="col" style="width: 120px">Product</th>
+                                        <th scope="col">Details</th>
+                                        <th scope="col" style="width: 100px">Price</th>
+                                        <th scope="col" style="width: 150px">Quantity</th>
+                                        <th scope="col" style="width: 100px">Total</th>
+                                        <th scope="col" style="width: 60px"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Cart Item 1 -->
+                                    <tr>
+                                        <td>
+                                            <img src="https://i.dummyjson.com/data/products/1/thumbnail.jpg" class="img-fluid rounded" alt="iPhone 9">
+                                        </td>
+                                        <td>
+                                            <h6 class="mb-1">iPhone 9</h6>
+                                            <small class="text-muted">Brand: Apple</small>
+                                        </td>
+                                        <td>$549.00</td>
+                                        <td>
+                                            <div class="input-group input-group-sm">
+                                                <button class="btn btn-outline-secondary" type="button">-</button>
+                                                <input type="text" class="form-control text-center" value="1">
+                                                <button class="btn btn-outline-secondary" type="button">+</button>
+                                            </div>
+                                        </td>
+                                        <td>$549.00</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    
+                                    <!-- Cart Item 2 -->
+                                    <tr>
+                                        <td>
+                                            <img src="https://i.dummyjson.com/data/products/6/thumbnail.png" class="img-fluid rounded" alt="MacBook Pro">
+                                        </td>
+                                        <td>
+                                            <h6 class="mb-1">MacBook Pro</h6>
+                                            <small class="text-muted">Brand: Apple</small>
+                                        </td>
+                                        <td>$1,749.00</td>
+                                        <td>
+                                            <div class="input-group input-group-sm">
+                                                <button class="btn btn-outline-secondary" type="button">-</button>
+                                                <input type="text" class="form-control text-center" value="1">
+                                                <button class="btn btn-outline-secondary" type="button">+</button>
+                                            </div>
+                                        </td>
+                                        <td>$1,749.00</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    
+                                    <!-- Cart Item 3 -->
+                                    <tr>
+                                        <td>
+                                            <img src="https://i.dummyjson.com/data/products/3/thumbnail.jpg" class="img-fluid rounded" alt="Samsung Universe 9">
+                                        </td>
+                                        <td>
+                                            <h6 class="mb-1">Samsung Universe 9</h6>
+                                            <small class="text-muted">Brand: Samsung</small>
+                                        </td>
+                                        <td>$1,249.00</td>
+                                        <td>
+                                            <div class="input-group input-group-sm">
+                                                <button class="btn btn-outline-secondary" type="button">-</button>
+                                                <input type="text" class="form-control text-center" value="1">
+                                                <button class="btn btn-outline-secondary" type="button">+</button>
+                                            </div>
+                                        </td>
+                                        <td>$1,249.00</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cart Summary -->
+                <div class="row">
+                    <div class="col-md-5 offset-md-7">
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                <h5 class="mb-0">Order Summary</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Subtotal</span>
+                                    <span>$3,547.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Shipping</span>
+                                    <span>$0.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Tax</span>
+                                    <span>$354.70</span>
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between fw-bold">
+                                    <span>Total</span>
+                                    <span>$3,901.70</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary">Proceed to Checkout</button>
+                                    <a href="index.html" class="btn btn-outline-secondary">Continue Shopping</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>DummyJSON Store</h5>
+                    <p class="text-muted">The best fake store using dummyjson.com API</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Products</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">About Us</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <address class="text-muted">
+                        Email: info@dummyjsonstore.com<br>
+                        Phone: (123) 456-7890
+                    </address>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="text-center text-muted">
+                <small>&copy; 2023 DummyJSON Store. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

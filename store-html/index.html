@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DummyJSON Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header with Navbar -->
+    <header class="bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand" href="index.html">DummyJSON Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <form class="d-flex me-2">
+                        <input class="form-control me-2" type="search" placeholder="Search products...">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <a href="auth.html" class="btn btn-outline-light me-2">Login</a>
+                    <a href="cart.html" class="btn btn-primary position-relative">
+                        Cart
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            3
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <!-- Filters Sidebar -->
+            <aside class="col-md-3">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5>Filters</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6>Categories</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="category1" checked>
+                            <label class="form-check-label" for="category1">Smartphones</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="category2">
+                            <label class="form-check-label" for="category2">Laptops</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="category3">
+                            <label class="form-check-label" for="category3">Fragrances</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="category4">
+                            <label class="form-check-label" for="category4">Skincare</label>
+                        </div>
+                        
+                        <hr>
+                        
+                        <h6>Price Range</h6>
+                        <div class="mb-3">
+                            <label for="priceMin" class="form-label">Min: $100</label>
+                            <input type="range" class="form-range" min="0" max="2000" id="priceMin">
+                        </div>
+                        <div class="mb-3">
+                            <label for="priceMax" class="form-label">Max: $1500</label>
+                            <input type="range" class="form-range" min="0" max="2000" id="priceMax">
+                        </div>
+                        
+                        <hr>
+                        
+                        <h6>Brand</h6>
+                        <select class="form-select mb-3">
+                            <option selected>All Brands</option>
+                            <option>Apple</option>
+                            <option>Samsung</option>
+                            <option>OPPO</option>
+                            <option>Huawei</option>
+                        </select>
+                        
+                        <button class="btn btn-primary w-100">Apply Filters</button>
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- Products Listing -->
+            <section class="col-md-9">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2>Products</h2>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown">
+                            Sort by: Featured
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Price: Low to High</a></li>
+                            <li><a class="dropdown-item" href="#">Price: High to Low</a></li>
+                            <li><a class="dropdown-item" href="#">Rating</a></li>
+                            <li><a class="dropdown-item" href="#">Newest</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <!-- Product Card 1 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://i.dummyjson.com/data/products/1/thumbnail.jpg" class="card-img-top p-3" alt="iPhone 9">
+                            <div class="card-body">
+                                <h5 class="card-title">iPhone 9</h5>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="text-danger fw-bold">$549</span>
+                                    <span class="text-warning">★ 4.69 (94)</span>
+                                </div>
+                                <p class="card-text text-muted small">An apple mobile which is nothing like apple</p>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <a href="product.html?id=1" class="btn btn-primary w-100">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Card 2 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://i.dummyjson.com/data/products/2/thumbnail.jpg" class="card-img-top p-3" alt="iPhone X">
+                            <div class="card-body">
+                                <h5 class="card-title">iPhone X</h5>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="text-danger fw-bold">$899</span>
+                                    <span class="text-warning">★ 4.44 (34)</span>
+                                </div>
+                                <p class="card-text text-muted small">SIM-Free, Model A19211 6.5-inch Super Retina HD display</p>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <a href="product.html?id=2" class="btn btn-primary w-100">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Card 3 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://i.dummyjson.com/data/products/3/thumbnail.jpg" class="card-img-top p-3" alt="Samsung Universe 9">
+                            <div class="card-body">
+                                <h5 class="card-title">Samsung Universe 9</h5>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="text-danger fw-bold">$1249</span>
+                                    <span class="text-warning">★ 4.09 (36)</span>
+                                </div>
+                                <p class="card-text text-muted small">Samsung's new variant which goes beyond Galaxy to the Universe</p>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <a href="product.html?id=3" class="btn btn-primary w-100">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Card 4 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://i.dummyjson.com/data/products/4/thumbnail.jpg" class="card-img-top p-3" alt="OPPOF19">
+                            <div class="card-body">
+                                <h5 class="card-title">OPPOF19</h5>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="text-danger fw-bold">$280</span>
+                                    <span class="text-warning">★ 4.3 (125)</span>
+                                </div>
+                                <p class="card-text text-muted small">OPPO F19 is officially announced on April 2021.</p>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <a href="product.html?id=4" class="btn btn-primary w-100">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Card 5 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://i.dummyjson.com/data/products/5/thumbnail.jpg" class="card-img-top p-3" alt="Huawei P30">
+                            <div class="card-body">
+                                <h5 class="card-title">Huawei P30</h5>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="text-danger fw-bold">$499</span>
+                                    <span class="text-warning">★ 4.09 (32)</span>
+                                </div>
+                                <p class="card-text text-muted small">Huawei's re-badged P30 Pro New Edition was officially unveiled</p>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <a href="product.html?id=5" class="btn btn-primary w-100">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Card 6 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://i.dummyjson.com/data/products/6/thumbnail.png" class="card-img-top p-3" alt="MacBook Pro">
+                            <div class="card-body">
+                                <h5 class="card-title">MacBook Pro</h5>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="text-danger fw-bold">$1749</span>
+                                    <span class="text-warning">★ 4.57 (83)</span>
+                                </div>
+                                <p class="card-text text-muted small">MacBook Pro 2021 with mini-LED display may launch between September</p>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <a href="product.html?id=6" class="btn btn-primary w-100">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <nav class="mt-5" aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>DummyJSON Store</h5>
+                    <p class="text-muted">The best fake store using dummyjson.com API</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">Home</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Products</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">About Us</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <address class="text-muted">
+                        Email: info@dummyjsonstore.com<br>
+                        Phone: (123) 456-7890
+                    </address>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="text-center text-muted">
+                <small>&copy; 2023 DummyJSON Store. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

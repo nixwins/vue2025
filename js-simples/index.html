@@ -12,6 +12,14 @@
     </div>
 
     <script>
+      const apiKey = "IKP0K5MOGWC46IUA";
+      fetch(
+        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=AAPL&apikey=${apiKey}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+        });
       let count = 0;
       const counterElement = document.getElementById("counter");
       const incrementBtn = document.getElementById("incrementBtn");
